@@ -76,7 +76,7 @@
             
         </div>
         <div style="text-align: center">
-            <form id="gridea-search-form" style="position: relative" data-update="1655908285398"
+            <form id="gridea-search-form" style="position: relative" data-update="1655997276809"
                 action="/search/">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
                 <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
@@ -100,8 +100,13 @@
             <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#-mybatis-%E6%97%A5%E5%BF%97-reader-entry-%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98">- Mybatis 日志 Reader entry 乱码问题</a></li>
-<li><a href="#-mybatis%E9%85%8D%E7%BD%AE%E6%8F%92%E4%BB%B6%E6%8A%A5%E9%94%99">- Mybatis配置插件报错</a></li>
+<li>
+<ul>
+<li><a href="#1mybatis-%E6%97%A5%E5%BF%97-reader-entry-%E4%B9%B1%E7%A0%81%E9%97%AE%E9%A2%98">1.Mybatis 日志 Reader entry 乱码问题</a></li>
+<li><a href="#2mybatis%E9%85%8D%E7%BD%AE%E6%8F%92%E4%BB%B6%E6%8A%A5%E9%94%99">2.Mybatis配置插件报错</a></li>
+<li><a href="#3%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E9%94%99%E8%AF%AF">3.数据库连接错误</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -121,7 +126,7 @@
                 <div class="post-content">
                     <p>遇到的bug解决方式</p>
 <!-- more -->
-<h2 id="-mybatis-日志-reader-entry-乱码问题">- Mybatis 日志 Reader entry 乱码问题</h2>
+<h3 id="1mybatis-日志-reader-entry-乱码问题">1.Mybatis 日志 Reader entry 乱码问题</h3>
 <p>分析：上述日志有两处问题<br>
 org.jboss.vfs.VFS 没找到<br>
 Reader entry 乱码<br>
@@ -138,9 +143,13 @@ Reader entry 乱码<br>
 <p>————————————————<br>
 版权声明：本文为CSDN博主「小菜鸡wangyan」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
 原文链接：https://blog.csdn.net/qq_44318273/article/details/114363584</p>
-<h2 id="-mybatis配置插件报错">- Mybatis配置插件报错</h2>
+<h3 id="2mybatis配置插件报错">2.Mybatis配置插件报错</h3>
 <p>配置<a href="https://so.csdn.net/so/search?q=mybatis">mybatis</a>的配置文件插入plugins标签时，在根目录报错。原因是：根目录下的标签必须按照它规定的循序排列</p>
 <p>The content of element type &quot;configuration&quot; must match &quot;(properties?,settings?,typeAliases?,typeHandlers?,objectFactory?,objectWrapperFactory?,reflectorFactory?,plugins?,environments?,databaseIdProvider?,mappers?)&quot;.</p>
+<h3 id="3数据库连接错误">3.数据库连接错误</h3>
+<p>org.apache.ibatis.exceptions.PersistenceException:<br>
+Error updating database.  Cause: com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure<br>
+mysql版本5.7.x，mysql-connector-java 版本看别人用的8.0.18,我就用这个吧。结果就这报错，折腾半天发现驱动问题，换一个版本就行了8.0.28</p>
 
                 </div>
             </article>
